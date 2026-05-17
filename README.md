@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Nyay Saarthi Banner" width="100%" style="border-radius: 12px; margin-bottom: 20px;" />
+</p>
+
 <h1 align="center">Nyay Saarthi</h1>
 
 <p align="center">
