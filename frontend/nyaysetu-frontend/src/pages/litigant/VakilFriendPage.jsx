@@ -5,7 +5,7 @@ import { vakilFriendAPI } from '../../services/api';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { API_BASE_URL } from '../../config/apiConfig';
+import { API_BASE_URL, NLP_BASE_URL } from '../../config/apiConfig';
 import AvatarPanel from '../../components/avatar/AvatarPanel';
 import { useTranslation } from 'react-i18next';
 import useChatStore from '../../store/chatStore';
@@ -866,9 +866,9 @@ export default function VakilFriendChat() {
         const formData = new FormData();
         formData.append('file', file);
 
-        // OCR API call
+        // OCR API call — routed to FastAPI NLP Orchestrator (port 8001)
         const response = await axios.post(
-            `${API_BASE_URL}/ocr/modi`,
+            `${NLP_BASE_URL}/ocr/modi`,
             formData,
             {
                 headers: {
